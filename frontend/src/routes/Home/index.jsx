@@ -34,28 +34,30 @@ export function Home(){
 
     useEffect(() => {
       const handleKeyDown = (e) => {
-        const speed = 10; // Ajuste a velocidade do personagem conforme necessário
-
+        const speed = 5; // Ajuste a velocidade do personagem conforme necessário
+        const maxX = window.innerWidth - 100; // Largura da tela - largura do personagem
+        const maxY = window.innerHeight - 40; // Altura da tela - altura do personagem
+    
         switch (e.key) {
           case 'ArrowUp':
-            setCharPosition((prev) => ({ x: prev.x, y: prev.y - speed }));
+            setCharPosition((prev) => ({ x: prev.x, y: Math.max(prev.y - speed, 0) }));
             break;
           case 'ArrowDown':
-            setCharPosition((prev) => ({ x: prev.x, y: prev.y + speed }));
+            setCharPosition((prev) => ({ x: prev.x, y: Math.min(prev.y + speed, maxY) }));
             break;
           case 'ArrowLeft':
-            setCharPosition((prev) => ({ x: prev.x - speed, y: prev.y }));
+            setCharPosition((prev) => ({ x: Math.max(prev.x - speed, 0), y: prev.y }));
             break;
           case 'ArrowRight':
-            setCharPosition((prev) => ({ x: prev.x + speed, y: prev.y }));
+            setCharPosition((prev) => ({ x: Math.min(prev.x + speed, maxX), y: prev.y }));
             break;
           default:
             break;
         }
       };
-  
+    
       document.addEventListener('keydown', handleKeyDown);
-  
+    
       return () => {
         document.removeEventListener('keydown', handleKeyDown);
       };
