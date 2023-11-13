@@ -1,0 +1,20 @@
+REQUISITOS:
+ter o Node instalado:
+https://nodejs.org/en/download
+
+
+COMO INSTALAR OS PACOTES:
+ - dentro do diretorio raiz do projeto rode o comando "npm install" pelo terminal
+ - ou no vscode: apert "CTRL + ASPAS SIMPLES" para abrir o terminal e então digite "npm install"
+
+Com os pacotes instalados rode o comando "npm start" para iniciar o servidor
+
+
+
+
+
+ROTAS DO PROJETO
+login => /users/login
+verificar token => /users/verify-token
+encontrar pokemon => /pokemons/d44d63e5-4724-4532-aff94b0369ee5874
+buscar todos os pokemons => /pokemons

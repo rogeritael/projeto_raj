@@ -1,0 +1,38 @@
+const UserRepository = require('../repositories/UserRepository')
+
+class UserController {
+    async login(req, res){
+        
+        const { username, password } = req.body
+        
+        const user = await UserRepository.findByUserName(username)
+        
+        if(!user){
+            return res.status(404).json({message: 'Usuário não encontrado'})
+        }
+        
+        if(user.password != password){
+            return res.status(404).json({message: 'Senha incorreta'})
+        }
+
+        res.status(200).json(user.token)  
+    }
+
+    async validateToken(req, res){
+        const { token } = req.body
+
+        if(!token){
+            res.status(404).json({ message: 'Token Inválido' })
+        }
+
+        const user = await UserRepository.getUserByToken(token)
+
+        if(!user){
+            res.status(404).json({ message: 'Token Inválido' })
+        }
+
+        res.status(200).json(user)
+    }
+}
+
+module.exports = new UserController();
