@@ -1,0 +1,24 @@
+BACKEND
+requisitos:
+ - ter o node instalado na sua máquina
+
+instalação dos pacotes:
+dentro do diretorio raiz  do projeto rode o comando "npm install" pelo terminal
+no vscode: apert ctrl + ' para abrir o terminal e então digite "npm install"
+
+com os pacotes instalados rode o comando "npm start" para iniciar o servidor
+
+o servidor roda em http://localhost:3000
+
+
+FRONT END
+requisitos:
+ - ter o node instalado na sua máquina para poder rodar comandos npm
+
+instalação:
+dentro do diretório raiz (pasta frontend) rode o comando "npm install" pelo terminal
+se preferir, instale pelo terminal do vscode: apert ctrl + ' para abrir o terminal e então digite "npm install"
+
+rode o comando "npm run dev" para iniciar o servidor do projeto
+
+o frontend roda em http://localhos:5153/

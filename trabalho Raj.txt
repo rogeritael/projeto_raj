@@ -1,0 +1,9 @@
+[x] PROGRESSO - O usuário encontra pokemons enquanto anda no mapa e consegue interagir cim eles recebendo feedback da aplicação ao fazer certas ações, como capturar pokemons e ter acesso a eles na página
+de "meus pokémons"
+[x] MAPA DESCBLOQUEADO - O usuário precisa realizar tartefas antes de conseguir avançar para outro mapa
+[x] MVC (Model, Views, Controllers) - Projeto estruturado em MVC, apenas sem as Views, por se tratar de uma API e ser renderizado no frontend
+[x] EFEITO DE SELEÇÃO - componentes e elementos sofrem alteração ao interagir com o mouse
+[x] ACESSIBILIDADE - imagens com propriedade alt com descrição da imagem apresentada. O Alt é lido pelos leitores de tela para usuários com necessidades especiais
+[x] PESQUISA - usuário consegue fazer pesquisa de personagens
+[x] VELOCIDADE DO DIA - mapa muda de acordo com o horário do dia, escurecendo à noite a partir das 20h no horário do jogo
+[x] LOGIN - rotas protegidas que só podem ser acessadas caso o usuário esteja logado
